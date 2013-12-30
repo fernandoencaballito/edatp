@@ -70,7 +70,7 @@ public class Main {
 		
 		boardSolution=board.solveAprox(l, timer);
 		if(boardSolution==null){
-			System.out.println("No se encontro solución al mapa en el tiempo dado");
+			System.out.println("No se encontro solucn al mapa en el tiempo dado");
 			return;
 		}
 		chronometer.stop();
