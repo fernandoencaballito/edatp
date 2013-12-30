@@ -2,9 +2,20 @@
 	<!-- Compila el proyecto, deja los archivos class en el directorio bin -->
 	<target name="compile">
 		<mkdir dir="bin" />
-		<javac srcdir="src" destdir="bin"/>
+    <javac srcdir="src" destdir="bin" classpath="lib/junit-4.7.jar"/>
 	</target>
+  
+  <!-- Ejecuta los tests. -->
+  <target name="tests" depends="compile">
+    <junit>
+      <formatter type="brief" usefile="false"/>
+      <classpath path="bin;lib/junit-4.7.jar" />
 
+      <test name="tests.testaprox" />
+      <test name="tests.TestArchivos" />
+      <test name="tests.TestExact" />
+    </junit>
+  </target>
 	<!-- Crea el jar ejecutable con todo el proyecto compilado. -->
 	<target name="dist" depends="compile">
 		<copy todir="bin/resources">
