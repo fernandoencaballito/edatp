@@ -50,7 +50,7 @@ public class Main {
 		boardSolution=board.solve(l);
 		chronometer.stop();
 		if(boardSolution==null){
-			System.out.println("El mapa ingresado no tiene solución.");
+			System.out.println("El mapa ingresado no tiene solucion.");
 			System.out.println("Tiempo demorado:"+chronometer.getElapsedTimeInMilisecs()+"milisegundos");
 			return;
 		}
@@ -84,7 +84,7 @@ public class Main {
 		
 		frame.showBoard();
 		System.out.println("Cantidad de lugares libres"+boardSolution.unPaintedCells());
-		System.out.println("Tablero soluciÃ³n:");
+		System.out.println("Tablero soluci:");
 		System.out.println(boardSolution);
 	}
 
