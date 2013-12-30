@@ -6,7 +6,7 @@
 	</target>
   
   <!-- Ejecuta los tests. -->
-  <target name="tests" depends="compile">
+  <target name="test" depends="compile">
     <junit>
       <formatter type="brief" usefile="false"/>
       <classpath path="bin;lib/junit-4.7.jar" />
